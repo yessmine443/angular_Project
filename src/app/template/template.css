@@ -1,0 +1,182 @@
+/* ===== Palette académique (surcharge locale des variables) ===== */
+:host {
+  display: block;
+  min-height: 100vh;
+
+  --primary: #1f2a44;          /* bleu marine universitaire */
+  --primary-soft: #eef1f6;     /* survol discret */
+  --accent: #b08d57;           /* or / bronze */
+  --card: #fbfaf7;             /* ivoire */
+  --text: #2b2b2b;
+  --border: #d9d6cf;
+
+  --font-serif: "Georgia", "Times New Roman", "Cambria", serif;
+  --font-sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+  background: #f4f2ed;         /* fond papier */
+  font-family: var(--font-sans);
+  color: var(--text);
+}
+
+/* ===== Layout général ===== */
+mat-sidenav-container {
+  min-height: 100vh;
+  background: transparent;
+  --mat-sidenav-content-background-color: transparent;
+  --mat-sidenav-container-background-color: transparent;
+}
+
+mat-sidenav-content {
+  background: transparent;
+}
+
+/* ===== Barre du haut ===== */
+mat-sidenav-content > mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--primary);
+  color: #fff;
+  border-bottom: 3px solid var(--accent);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  font-family: var(--font-serif);
+  --mat-toolbar-container-background-color: transparent;
+  --mat-toolbar-container-text-color: #fff;
+}
+
+/* Boutons de la barre (menu + utilisateur) */
+.toolbar-button {
+  color: #fff;
+  --mat-icon-button-icon-color: #fff;
+  --mat-button-text-label-text-color: #fff;
+  --mat-button-text-state-layer-color: #fff;
+  --mat-icon-button-state-layer-color: #fff;
+}
+
+/* Bouton menu : icône + texte "Lab" */
+button[aria-label="Toggle sidenav"] {
+  width: auto !important;
+  padding: 0 16px !important;
+  border-radius: 2px !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  font-family: var(--font-serif);
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  background: transparent;
+  transition: background 0.2s, border-color 0.2s;
+}
+button[aria-label="Toggle sidenav"]:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent) !important;
+  box-shadow: none;
+}
+button[aria-label="Toggle sidenav"] mat-icon {
+  margin-right: 8px;
+}
+
+/* Bouton utilisateur : poussé à droite */
+button[mat-button].toolbar-button {
+  margin-left: auto !important;
+  margin-right: 8px !important;
+  border-radius: 2px;
+  font-family: var(--font-sans);
+  letter-spacing: 0.3px;
+}
+button[mat-button].toolbar-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
+/* Image avatar vide : on la masque */
+.avatar {
+  display: none;
+}
+
+.toolbar-separator {
+  display: none;
+}
+
+/* ===== Menu latéral ===== */
+mat-sidenav {
+  border-radius: 0;
+  overflow: hidden;
+  background: var(--card);
+  border-right: 1px solid var(--border);
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.06);
+}
+
+mat-sidenav mat-toolbar {
+  height: 68px;
+  background: var(--primary);
+  color: #fff;
+  border-bottom: 3px solid var(--accent);
+  font-family: var(--font-serif);
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  --mat-toolbar-container-background-color: transparent;
+  --mat-toolbar-container-text-color: #fff;
+}
+
+mat-sidenav mat-toolbar mat-icon {
+  margin-right: 10px;
+  font-size: 26px;
+  height: 26px;
+  width: 26px;
+  color: var(--accent);
+}
+
+mat-nav-list {
+  padding: 12px 0;
+  --mat-list-list-item-label-text-color: var(--text);
+  --mat-list-list-item-hover-label-text-color: var(--primary);
+}
+
+mat-nav-list a {
+  margin: 2px 0;
+  border-radius: 0;
+  border-left: 3px solid transparent;
+  color: var(--text);
+  font-family: var(--font-serif);
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+mat-nav-list a mat-icon {
+  margin-right: 14px;
+  vertical-align: middle;
+  color: var(--primary);
+}
+
+mat-nav-list a:hover {
+  background: var(--primary-soft);
+  border-left-color: var(--accent);
+  color: var(--primary);
+}
+
+/* ===== Zone de contenu ===== */
+.content {
+  max-width: 1000px;
+  margin: 24px auto 40px;
+  padding: 32px 36px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--primary);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  line-height: 1.7;
+}
+
+.content h1,
+.content h2,
+.content h3 {
+  font-family: var(--font-serif);
+  color: var(--primary);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+  margin-bottom: 18px;
+}
+
+.content br {
+  display: none;
+}

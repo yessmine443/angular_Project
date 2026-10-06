@@ -1,0 +1,21 @@
+<!-- ngModel : lie chaque champ à une variable (two-way binding).
+     #f="ngForm" : récupère tous les champs du formulaire d'un coup (f.value). -->
+<form #f="ngForm" (ngSubmit)="login()">
+
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" name="email"
+           [(ngModel)]="email" required email>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput type="password" name="password"
+           [(ngModel)]="password" required>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit"
+          [disabled]="f.invalid">
+    Submit
+  </button>
+</form>

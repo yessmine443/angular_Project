@@ -1,0 +1,61 @@
+{
+  "name": "lab",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "json-server": "json-server --watch src/assets/db.json --port 3000",
+    "test": "ng test",
+    "serve:ssr:lab": "node dist/lab/server/server.mjs"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "*.html",
+        "options": {
+          "parser": "angular"
+        }
+      }
+    ]
+  },
+  "private": true,
+  "packageManager": "npm@10.9.7",
+  "dependencies": {
+    "@angular/cdk": "^21.2.14",
+    "@angular/common": "^21.0.0",
+    "@angular/compiler": "^21.0.0",
+    "@angular/core": "^21.0.0",
+    "@angular/fire": "^20.1.0",
+    "@angular/forms": "^21.0.0",
+    "@angular/material": "^21.2.14",
+    "@angular/platform-browser": "^21.0.0",
+    "@angular/platform-server": "^21.0.0",
+    "@angular/router": "^21.0.0",
+    "@angular/ssr": "^21.0.0",
+    "express": "^5.1.0",
+    "firebase": "^12.19.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@angular/build": "^21.0.0",
+    "@angular/cli": "^21.0.0",
+    "@angular/compiler-cli": "^21.0.0",
+    "@types/express": "^5.0.1",
+    "@types/node": "^20.17.19",
+    "jsdom": "^27.1.0",
+    "json-server": "^1.0.0-beta.15",
+    "typescript": "~5.9.2",
+    "vitest": "^4.0.8"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true,
+    "@parcel/watcher@2.6.0": true,
+    "lmdb@3.5.1": true,
+    "msgpackr-extract@3.0.4": true
+  }
+}
