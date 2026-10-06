@@ -1,17 +1,17 @@
 export const firebaseConfig = {
 
-  apiKey: "AIzaSyBvst4bfNNhrYaFU6L4RX-JAV8hzwdKhXk",
+  apiKey: "",
 
-  authDomain: "eniss4-f2e9e.firebaseapp.com",
+  authDomain: "",
 
-  projectId: "eniss4-f2e9e",
+  projectId: "",
 
-  storageBucket: "eniss4-f2e9e.firebasestorage.app",
+  storageBucket: "",
 
-  messagingSenderId: "1005492249797",
+  messagingSenderId: "",
 
-  appId: "1:1005492249797:web:a74c58cb6eaf144ba5bcac",
+  appId: "",
 
-  measurementId: "G-9FZHHZMEVE"
+  measurementId: ""
 
 };
