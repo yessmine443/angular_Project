@@ -1,2 +1,10 @@
-<router-outlet></router-outlet>
-<app-template></app-template>
+<!-- <router-outlet></router-outlet> -->
+
+<!-- <app-template *ngIf="=!b"></app-template>
+<app-login *ngIf="b"></app-login> -->
+@if (!b) {
+  <app-template></app-template>
+}
+@else {
+    <app-login></app-login>
+}

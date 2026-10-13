@@ -1,1 +1,18 @@
-<p>dashboard works!</p>
+<mat-card>
+    <mat-card-title>Nb Members</mat-card-title>
+    <mat-card-subtitle>{{Nb_Members}}</mat-card-subtitle>
+
+</mat-card>
+
+
+<div class="chart-wrapper">
+  <canvas baseChart
+          [type]="'pie'"
+    [datasets]="chartData"
+    [labels]="chartLabels"
+    [options]="chartOptions"
+    >
+  </canvas>
+</div>
+
+
